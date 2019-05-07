@@ -1,0 +1,48 @@
+﻿@model TSB100UserProfileWebSite.Models.UpdateProfileViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col align-self-center">
+            <form class="createAccountForm">
+
+                <div class="form-group">
+                    <label for="userFirstName">Personnummer</label>
+                    @*<input type="text" class="form-control text-center" id="personalNumber" aria-describedby="Stad" placeholder="ÅÅMMDDXXX" required maxlength="15">*@
+                    @Html.TextBoxFor(vm => vm.personalnumber, new { @class = "form-control text-center", @placeholder = "ÅÅMMDDXXX" })
+                </div>
+                <div class="form-group">
+                    <label for="userCity">Stad</label>
+                    @*<input type="text" class="form-control text-center" id="userCity" aria-describedby="Stad" placeholder="Stad" required>*@
+                    @Html.TextBoxFor(vm => vm.userCity, new { @class = "form-control text-center", @placeholder = "Stad" })
+
+                </div>
+                <div class="form-group">
+                    <label for="userAddress">Adress</label>
+                    @*<input type="text" class="form-control text-center" id="userAddress" aria-describedby="Adress" placeholder="Adress" required>*@
+                    @Html.TextBoxFor(vm => vm.userAddress, new { @class = "form-control text-center", @placeholder = "Adress" })
+
+                </div>
+                <div class="form-group">
+                    <label for="userZipCode">Postnummer</label>
+                    @*<input type="number" class="form-control text-center" id="userZipCode" aria-describedby="Postnummer" placeholder="Postnummer" required>*@
+                    @Html.TextBoxFor(vm => vm.userZipCode, new { @class = "form-control text-center", @placeholder = "ÅÅMMDDXXX" })
+
+                </div>
+                <div class="form-group">
+                    <label for="userPhoneNumber">Telefonnummer</label>
+                    @*<input type="number" class="form-control text-center" id="userPhoneNumber" aria-describedby="Telefonnummer" placeholder="Telefonnummer" required>*@
+                    @Html.TextBoxFor(vm => vm.userPhoneNumber, new { @class = "form-control text-center", @placeholder = "Telefonnummer" })
+
+                </div>
+                <div class="form-group">
+                    <label for="userProfilePicture">Profilbild</label>
+                    @*<input type="file" class="form-control text-center" id="userProfilePicture" aria-describedby="Profilbild" placeholder="Profilbild" required>*@
+                    @Html.TextBoxFor(vm => vm.userProfilePicture, new { @class = "form-control text-center", @placeholder = "Profilbild", @type="file" })
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Spara</button>
+            </form>
+        </div>
+    </div>
+</div>
